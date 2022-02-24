@@ -112,12 +112,12 @@
   </style>
   <div class="navbar">
     <ul>
-      <a onclick="singleSpaNavigate('/react')">
+      <a onclick="customNavigate('/react')">
         <li>
           React
         </li>
       </a>
-      <a onclick="singleSpaNavigate('/angular')">
+      <a onclick="customNavigate('/angular')">
         <li>
           Angular
         </li>
@@ -125,6 +125,10 @@
     </ul>
   </div>
   <script>
+    const customNavigate = (param) => {
+      console.log('========================')
+      singleSpaNavigate(param)
+    }
     System.import('@org1/root-config');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
